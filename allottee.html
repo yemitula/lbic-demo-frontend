@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="utf-8" />
+  <title>Lagos Building Investment Company | ...</title>
+  <meta name="description" content="app, web app, responsive, responsive layout, admin, admin panel, admin dashboard, flat, flat ui, ui kit, AngularJS, ui route, charts, widgets, components" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="../lbic-demo-backend/libs/assets/animate.css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="../lbic-demo-backend/libs/assets/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="../lbic-demo-backend/libs/assets/simple-line-icons/css/simple-line-icons.css" type="text/css" />
+  <link rel="stylesheet" href="../lbic-demo-backend/libs/jquery/bootstrap/dist/css/bootstrap.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/font.css" type="text/css" />
+  <link rel="stylesheet" href="css/app.css" type="text/css" />
+
+</head>
+<body>
+<div class="app app-header-fixed ">
+  
+
+    <!-- header -->
+  <header id="header" class="app-header navbar" role="menu">
+      <!-- navbar header -->
+      <div class="navbar-header bg-dark">
+        <button class="pull-right visible-xs dk" ui-toggle-class="show" target=".navbar-collapse">
+          <i class="glyphicon glyphicon-cog"></i>
+        </button>
+        <button class="pull-right visible-xs" ui-toggle-class="off-screen" target=".app-aside" ui-scroll="app">
+          <i class="glyphicon glyphicon-align-justify"></i>
+        </button>
+        <!-- brand -->
+       <!--  <a href="#/" class="navbar-brand text-lt">
+          <img src="img/Logo.png" style="max-width: 100px; max-height: 100px;" class="hide">
+          <span class="hidden-folded m-l-xs">LBIC</span>
+        </a> -->
+        <a href="#/" class="navbar-brand text-lt">
+          <img src="img/logo.png" style="max-width: 100px; max-height: 100px;">
+        </a>
+        <!-- / brand -->
+      </div>
+      <!-- / navbar header -->
+
+      <!-- navbar collapse -->
+      <div class="collapse pos-rlt navbar-collapse box-shadow bg-white-only">
+        <!-- buttons -->
+        <div class="nav navbar-nav hidden-xs">
+          <a href="#" class="btn no-shadow navbar-btn" ui-toggle-class="app-aside-folded" target=".app">
+            <i class="fa fa-dedent fa-fw text"></i>
+            <i class="fa fa-indent fa-fw text-active"></i>
+          </a>
+          <a href="#" class="btn no-shadow navbar-btn" ui-toggle-class="show" target="#aside-user">
+            <i class="icon-user fa-fw"></i>
+          </a>
+        </div>
+        <!-- / buttons -->
+
+        <!-- nabar right -->
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+              <i class="icon-bell fa-fw"></i>
+              <span class="visible-xs-inline">Notifications</span>
+              <span class="badge badge-sm up bg-danger pull-right-xs">2</span>
+            </a>
+            <!-- dropdown -->
+            <div class="dropdown-menu w-xl animated fadeInUp">
+              <div class="panel bg-white">
+                <div class="panel-heading b-light bg-light">
+                  <strong>You have <span>2</span> notifications</strong>
+                </div>
+                <div class="list-group">
+                  <a href class="list-group-item">
+                    <span class="pull-left m-r thumb-sm">
+                      <img src="img/a0.jpg" alt="..." class="img-circle">
+                    </span>
+                    <span class="clear block m-b-none">
+                      Use awesome animate.css<br>
+                      <small class="text-muted">10 minutes ago</small>
+                    </span>
+                  </a>
+                  <a href class="list-group-item">
+                    <span class="clear block m-b-none">
+                      1.0 initial released<br>
+                      <small class="text-muted">1 hour ago</small>
+                    </span>
+                  </a>
+                </div>
+                <div class="panel-footer text-sm">
+                  <a href class="pull-right"><i class="fa fa-cog"></i></a>
+                  <a href="#notes" data-toggle="class:show animated fadeInRight">See all the notifications</a>
+                </div>
+              </div>
+            </div>
+            <!-- / dropdown -->
+          </li>
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle clear" data-toggle="dropdown">
+              <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
+                <img src="img/a0.jpg" alt="...">
+                <i class="on md b-white bottom"></i>
+              </span>
+              <span class="hidden-sm hidden-md">John.Smith</span> <b class="caret"></b>
+            </a>
+            <!-- dropdown -->
+            <ul class="dropdown-menu animated fadeInRight w">
+              <li class="wrapper b-b m-b-sm bg-light m-t-n-xs">
+                <a ui-sref="app.page.profile">Change Password</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="index.html">Logout</a>
+              </li>
+            </ul>
+            <!-- / dropdown -->
+          </li>
+        </ul>
+        <!-- / navbar right -->
+      </div>
+      <!-- / navbar collapse -->
+  </header>
+  <!-- / header -->
+
+
+    <!-- aside -->
+  <aside id="aside" class="app-aside hidden-xs bg-dark">
+      <div class="aside-wrap">
+        <div class="navi-wrap">
+          <!-- user -->
+          <div class="clearfix hidden-xs text-center hide" id="aside-user">
+            <div class="dropdown wrapper">
+              <a href="app.page.profile">
+                <span class="thumb-lg w-auto-folded avatar m-t-sm">
+                  <img src="img/a0.jpg" class="img-full" alt="...">
+                </span>
+              </a>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle hidden-folded">
+                <span class="clear">
+                  <span class="block m-t-sm">
+                    <strong class="font-bold text-lt">John.Smith</strong> 
+                    <b class="caret"></b>
+                  </span>
+                  <span class="text-muted text-xs block">Art Director</span>
+                </span>
+              </a>
+              <!-- dropdown -->
+              <ul class="dropdown-menu animated fadeInRight w hidden-folded">
+                  <li> 
+                    <a href="page_profile.html">Change Password</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="page_signin.html">Logout</a>
+                </li>
+              </ul>
+              <!-- / dropdown -->
+            </div>
+            <div class="line dk hidden-folded"></div>
+          </div>
+          <!-- / user -->
+
+           <!-- nav -->
+          <nav ui-nav class="navi clearfix">
+            <ul class="nav">
+              <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                <span>Navigation</span>
+              </li>
+              <li>
+                <a href="user_profile.html" class="auto">
+                  <i class="glyphicon glyphicon-home icon text-primary-dker"></i>
+                  <span class="font-thin">Property Info</span>
+                </a>
+              </li>
+               <li>
+                <a href="allottee.html" class="auto">      
+                  <i class="glyphicon glyphicon-list-alt icon text-primary-dker"></i>
+                  <span class="font-thin">Allottee Info</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="auto">      
+                  <i class="glyphicon glyphicon-file icon text-primary-dker"></i>
+                  <span class="font-thin">Documents</span>
+                </a>
+              </li>
+
+              <li>
+                <a href class="auto">      
+                  <i class="glyphicon glyphicon-credit-card icon text-primary-dker"></i>
+                  <span class="font-thin">Fees</span>
+                </a>
+              </li>
+
+              <li>
+                <a href class="auto">      
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                  <i class="glyphicon glyphicon-tasks icon text-primary-dker"></i>
+                  <span class="font-thin">Other Info</span>
+                </a>
+              </li>
+              <!-- <li>
+                <a href="mail.html">
+                  <b class="badge bg-info pull-right">9</b>
+                  <i class="glyphicon glyphicon-envelope icon text-info-lter"></i>
+                  <span class="font-bold">Email</span>
+                </a>
+              </li> -->
+<!--               <li class="line dk"></li>
+ -->
+              <!-- <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                <span>Components</span>
+              </li> -->
+<!--               <li class="line dk hidden-folded"></li>
+ -->
+            </ul>
+          </nav>
+          <!-- nav -->
+        </div>
+      </div>
+  </aside>
+  <!-- / aside -->
+
+ <!-- content -->
+  <div id="content" class="app-content" role="main">
+    <div class="app-content-body ">
+      
+
+<div class="bg-light lter b-b wrapper-md">
+  <h1 class="m-n font-thin h3">Allottee Information</h1>
+</div>
+<div class="wrapper-md">
+  <div class="row">
+    <div class="col-sm-3 col-offset-1 connected" ui-jq="sortable" ui-options="{items:'.panel', handle:'.panel-heading', connectWith:'.connected'}">
+      <div class="panel panel-info">
+        <div class="panel">
+              
+              <div class="panel-header">
+                
+                  <img src="img/user.png" class="img-thumbnail" alt="" width="304" height="236">
+                
+                <div class="block">
+                  <strong>Adubi Oluwaseyi</strong>
+                </div>
+                
+              </div>
+              
+            </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          ID card                   
+        </div>
+        <div class="panel-body">
+          <p>
+        <button class="btn btn-default btn-block"><i class="fa fa-eye pull-left"></i> Click here to view</button>
+      </p> 
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-9">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+         <button class="btn btn-primary btn-addon btn-sm pull-right"><i class="fa fa-edit"></i>Edit</button>  
+          Personal Information
+        </div>
+        <table class="table table-striped m-b-none">
+          <!-- <thead>
+            <tr>
+              <th>Property</th>
+              <th>Attribute</th>
+            </tr>
+          </thead> -->
+          <tbody>
+            <tr>
+              <td>Firstname</td>
+              <td>David</td>
+            </tr>
+            <tr>
+              <td>Surname</td>
+              <td>Agono</td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td>david@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Phone</td>
+              <td>08085736406</td>
+            </tr>
+            <tr>
+              <td>Other Phone</td>
+              <td>08182345678</td>
+            </tr>
+            <tr>
+              <td>Marital Status</td>
+              <td>Single</td>
+            </tr>
+            <tr>
+              <td>Date of Birth</td>
+              <td>19/03/1987</td>
+            </tr>
+            <tr>
+              <td>Occupation</td>
+              <td>Banker</td>
+            </tr>
+            <tr>
+              <td>Next of Kin</td>
+              <td>Bola Ogunyemi</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+ <div class="panel panel-default">
+        <div class="panel-heading">
+         <button class="btn btn-primary btn-addon btn-sm pull-right"><i class="fa fa-edit"></i>Edit</button>  
+          Previous Addresses
+        </div>
+        <table class="table table-striped m-b-none">
+          <!-- <thead>
+            <tr>
+              <th>Property</th>
+              <th>Attribute</th>
+            </tr>
+          </thead> -->
+          <tbody>
+            <tr>
+              <td>Celia's Place, 413B, Omofade Crescent, Omole Phase 1, Ikeja, 100213, Lagos</td>
+            </tr>
+            <tr>
+              <td>Celia's Place, 413B, Omofade Crescent, Omole Phase 1, Ikeja, 100213, Lagos</td>
+            </tr>
+            <tr>
+              <td>Celia's Place, 413B, Omofade Crescent, Omole Phase 1, Ikeja, 100213, Lagos</td>
+            </tr>
+            <tr>
+              <td>Celia's Place, 413B, Omofade Crescent, Omole Phase 1, Ikeja, 100213, Lagos</td>
+            </tr>
+            <tr>
+              <td>Celia's Place, 413B, Omofade Crescent, Omole Phase 1, Ikeja, 100213, Lagos</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+</div>
+  </div>
+  </div>
+  <!-- /content -->
+  
+  <!-- footer -->
+  <footer id="footer" class="app-footer" role="footer">
+    <div class="wrapper b-t bg-light">
+      <span class="pull-right">2.2.0 <a href ui-scroll="app" class="m-l-sm text-muted"><i class="fa fa-long-arrow-up"></i></a></span>
+      &copy; 2017 Copyright.
+    </div>
+  </footer>
+  <!-- / footer -->
+
+
+
+</div>
+
+<script src="../lbic-demo-backend/libs/jquery/jquery/dist/jquery.js"></script>
+<script src="../lbic-demo-backend/libs/jquery/bootstrap/dist/js/bootstrap.js"></script>
+<script src="js/ui-load.js"></script>
+<script src="js/ui-jp.config.js"></script>
+<script src="js/ui-jp.js"></script>
+<script src="js/ui-nav.js"></script>
+<script src="js/ui-toggle.js"></script>
+<script src="js/ui-client.js"></script>
+
+</body>
+</html>
